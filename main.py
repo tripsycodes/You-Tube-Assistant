@@ -20,7 +20,7 @@ with st.sidebar:
 
 if question and youtube_url:
     db = youtube.vectordb_from_youtube(youtube_url)
-    response, docs =youtube.get_response(db, question)
+    response =youtube.get_response(db, question)
     st.subheader("Answer:")
     st.text(textwrap.fill(response, width = 80))
         
